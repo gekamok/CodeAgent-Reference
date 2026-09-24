@@ -1,0 +1,19 @@
+{
+  "name": "codeagent-js-checker",
+  "version": "0.0.0",
+  "description": "CodeAgent js/ts 代码检查器",
+  "type": "module",
+  "scripts": {
+    "install-deps": "npm i",
+    "test": "node codeagent_js_checker.js --test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "license": "Unlicense"
+}

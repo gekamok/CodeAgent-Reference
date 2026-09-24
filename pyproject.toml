@@ -1,0 +1,22 @@
+[project]
+name = "astrbot_plugin_codeagent"
+version = "0.0.0"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "astrbot>=4.24.0",
+    "RestrictedPython>=6.0.0",
+    "ruff>=0.8.0",
+    "mypy>=1.0.0",
+    "bandit>=1.7.0",
+    "pytest>=7.4.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.23.0",
+    "shellcheck-py"
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.0.0",
+    "twine>=4.0.0"
+]

@@ -1,0 +1,56 @@
+{
+  "plugin_name": "CodeAgent 插件",
+  "plugin_description": "代码编写 Agent，自动完成需求分析、代码编写、测试、Debug 和交付完整项目包。",
+  "skill_name": "CodeAgent",
+  "skill_description": "AI 自动编写代码，支持 Python/JavaScript/Shell，包含沙箱执行、安全审查、质量评估和自动 Debug 循环",
+  "commands": {
+    "agent": {
+      "name": "/agent",
+      "description": "触发 CodeAgent 开始编写代码"
+    },
+    "exitconver": {
+      "name": "/exitconver",
+      "description": "终止当前正在执行的 Agent 任务"
+    }
+  },
+  "errors": {
+    "no_requirement": "请提供具体的需求描述。示例：@机器人 /agent 写一个计算器",
+    "no_at": "请艾特机器人后再使用 /agent 命令",
+    "task_running": "当前已有 Agent 任务在执行，请等待完成或使用 /exitconver 退出。",
+    "no_active_task": "当前没有正在执行的 Agent 任务。",
+    "sandbox_failed": "沙箱执行失败，请检查代码或联系管理员。",
+    "security_blocked": "代码被安全策略拦截，已终止执行。",
+    "packager_failed": "文件打包失败，文件已单独列出，请手动下载。"
+  },
+  "messages": {
+    "task_started": "收到需求，正在分析...",
+    "task_cancelled": "已取消 Agent 任务。如有新需求，随时找我。",
+    "task_terminated": "已终止 Agent 任务，临时文件已清理。",
+    "writing_code": "开始编写代码...",
+    "running_test": "正在运行测试...",
+    "security_scan": "正在执行安全审查...",
+    "packaging": "正在打包文件..."
+  },
+  "dialogs": {
+    "confirm_scheme": "确认方案？回复\"确认\"开始编写。",
+    "confirm_cancel": "回复\"取消\"终止任务。",
+    "quality_rewrite": "质量评分低于75分，正在重写代码..."
+  },
+  "status": {
+    "running": "运行中",
+    "success": "成功",
+    "failed": "失败",
+    "completed": "已完成",
+    "cancelled": "已取消",
+    "terminated": "已终止"
+  },
+  "security": {
+    "risk_levels": {
+      "safe": "安全",
+      "low": "低风险",
+      "medium": "中风险",
+      "high": "高风险",
+      "critical": "严重"
+    }
+  }
+}

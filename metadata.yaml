@@ -1,0 +1,25 @@
+name: astrbot_plugin_codeagent
+display_name: CodeAgent
+version: 0.0.0
+desc: 代码编写Agent，自动完成需求分析、代码生成、沙箱运行测试、安全审查、质量评估、Debug和项目交付全自动流程
+short_desc: 自动化的项目编写Agent
+
+author: N/A
+
+astrbot_version: ">=4.24.0"
+
+entry_point: main:CodeAgentPlugin
+
+support_platforms:
+  - aiocqhttp
+  - qq_official
+  - discord
+
+tags:
+  - agent
+  - coding
+  - automation
+  - code
+  - debug
+  - 写代码
+  - 自动化流程

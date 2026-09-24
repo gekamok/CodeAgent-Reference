@@ -1,0 +1,74 @@
+{
+  "enable_visit_internet": {
+    "description": "访问外网",
+    "type": "bool",
+    "default": false,
+    "hint": "是否允许模型访问外网"
+  },
+  "visit_whitelist": {
+    "description": "访问网络白名单",
+    "type": "list",
+    "default": ["pypi.org", "github.com", "cdn.jsdelivr.net"],
+    "hint": "指定模型可以访问的外网域名(仅在访问外网设置开启时生效)"
+  },
+  "enable_use_knowledge": {
+    "description": "使用知识库",
+    "type": "bool",
+    "default": false,
+    "hint": "是否允许模型使用本地知识库"
+  },
+  "admin_blacklist": {
+    "description": "黑名单",
+    "type": "list",
+    "default": [],
+    "hint": "在黑名单中的用户无法使用CodeAgent，填用户id，留空则表示全体成员皆可使用"
+  },
+  "group_blacklist": {
+    "description": "群聊黑名单",
+    "type": "list",
+    "default": [],
+    "hint": "在黑名单中的群聊无法使用CodeAgent，填写群号，留空则表示所有群皆可使用"
+  },
+  "max_debug_rounds": {
+    "description": "最大Debug次数",
+    "type": "int",
+    "default": 10,
+    "hint": "决定模型使用Debug次数的阈值"
+  },
+  "requirement_analysis_model": {
+    "description": "用户需求分析模型",
+    "type": "string",
+    "default": "",
+    "hint": "解析用户需求并给出方案的模型，留空则使用默认提供的模型"
+  },
+  "coding_model": {
+    "description": "项目编写模型",
+    "type": "string",
+    "default": "",
+    "hint": "负责编写代码，测试，debug，代码审查全流程的模型，留空则使用默认提供的模型"
+  },
+  "code_running_time": {
+    "description": "代码在沙箱中执行的时间",
+    "type": "int",
+    "default": 120,
+    "hint": "每一轮代码在沙箱中执行的最大时间，超过则自动退出"
+  },
+  "quality_threshold": {
+    "description": "代码质量评分阈值",
+    "type": "int",
+    "default": 75,
+    "hint": "每一轮代码审查中的质量评分阈值，低于这个分数将直接重写"
+  },
+  "memory_limit": {
+    "description": "沙箱中代码可使用的最大内存(MB)",
+    "type": "float",
+    "default": 512.0,
+    "hint": "定义沙箱中的代码可以使用的最大内存，建议设置256-1024之间"
+  },
+  "max_file_size": {
+    "description": "单文件限制的最大大小(MB)",
+    "type": "float",
+    "default": 10.0,
+    "hint": "项目生成的单文件限制的最大大小"
+  }
+}
